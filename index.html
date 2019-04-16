@@ -1,332 +1,461 @@
-﻿<head><body><title>Interner Haber</title>
-<link href="https://fonts.googleapis.com/css?family=Roboto|Titillium+Web:400,600,700" rel="stylesheet">
+<head><body onload="fonk()"><title>Payment</title>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="stil.css"/>
-<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0\css\font-awesome.min.css" />
-<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-<div id="preloader">
-    <div id="status">&nbsp;</div>
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.0.8\web-fonts-with-css\css\fontawesome-all.css"/>
+<link rel="shortcut icon" href="favicon.ico" />
+
+
+
+<div class="line"></div>
+
+
+<link rel="stylesheet" type="text/css" href="sliders1.css" title="sliders1" media="screen" />
+<link rel="alternate stylesheet" type="text/css" href="sliders2.css" title="sliders2" media="screen" />
+<link rel="alternate stylesheet" type="text/css" href="sliders3.css" title="sliders3" media="screen" />
+
+
+<div class="header">
+  <div class="headerm">
+<a href="index.html"><img src="logo.png" class="logo"></img></a>
+
+<div class="panel">
+<a href="signup.html"><span class="trans">Sign up</span></a>
+
+<span onclick="document.getElementById('id01').style.display='block'" class="trans login">Log in</span>
+<div id="id01" class="modal">
+
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+      <input type="text" placeholder="E-mail" name="uname" required>
+      <input type="password" placeholder="Password" name="psw" required>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+      <button type="submit" class="button">Login</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1;padding:0 16px 0 16px;">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="button cancelbtn">Cancel</button>
+      <span class="psw"><a href="#">Forgot your password?</a></span>
+    </div>
+  </form>
 </div>
 
-   <!-- Preloader -->
+
+
+
+
+
+<span style="color:#02aab0;cursor:pointer;" onclick="myFunction()">EN<i class="fas fa-caret-down"></i></span>
+<div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
+  <a href="#" class="w3-bar-item w3-button">AZ</a>
+  <a href="#" class="w3-bar-item w3-button">RU</a>
+</div>
+
+
+
+</div>
+</div>
+</div>
+
+<p id="dils"></p>
+
+<div class="search">
+     <div class="box">
+<form novalidate="novalidate" onsubmit="return false;" class="searchbox sbx-custom">
+    <input type="search" name="search" placeholder="Search the services.." autocomplete="off" required="required" class="searchbox_input">
+    <button type="submit" title="Submit your search query." class="searchbox_submit">
+     <i class="fas fa-search" ></i>
+    </button>
+    <button type="reset" title="Clear the search query." class="searchbox_reset">
+<i class="fas fa-times"></i>
+    </button>
+</form>
+<span class="searcher">Popular searchs: internet, games, mobile</span>
+     </div>
 <script type="text/javascript">
-    //<![CDATA[
-        $(window).load(function() { // makes sure the whole site is loaded
-            $('#status').fadeOut(); // will first fade out the loading animation
-            $('#preloader').delay(300).fadeOut('slow'); // will fade out the white DIV that covers the website.
-            $('body').delay(300).css({'overflow':'visible'});
-        })
-    //]]>
+  document.querySelector('.searchbox [type="reset"]').addEventListener('click', function() {  this.parentNode.querySelector('input').focus();});
+</script>
+</div>
+
+
+
+<div class="slider">
+
+<div style="float:left;margin-top:8%;margin-left:9.5%;z-index:999;">
+<div class="slidertitle slidertitle1">
+<span class="slidert1">Payments</span>
+<span class="slidert2">Save your time and make payments on payment.az
+and get bonuses.</span>
+</div>
+<div class="slidertitle slidertitle2" style="display:none;">
+<span class="slidert1">Payments2</span>
+<span class="slidert2">Save your time and make payments on payment.az
+and get bonuses.</span>
+</div>
+<div class="slidertitle slidertitle3" style="display:none;">
+<span class="slidert1">Payments3</span>
+<span class="slidert2">Save your time and make payments on payment.az
+and get bonuses.</span>
+</div>
+
+
+<div>
+<div class="dots">
+<div class="dot demo" onclick="currentDiv(1), slider1()"></div>
+<div class="dot demo" onclick="currentDiv(2), slider2()"></div>
+<div class="dot demo" onclick="currentDiv(3), slider3()"></div>
+</div>
+</div>
+
+
+
+
+
+</div>
+<div class="quickreg">
+<p class="reg">Registration</p>
+
+<form novalidate="novalidate" onsubmit="return false;" class="searchbox2 sbx-custom">
+    <input style="border-radius:5px; font-weight: 400;" type="search" name="search" placeholder="First Name" autocomplete="off" required="required" class="searchbox_input">
+    <button type="reset" title="Clear the search query." class="searchbox_reset" style="cursor:pointer;">
+<i class="fas fa-times"></i>
+    </button>
+</form>
+
+<form novalidate="novalidate" onsubmit="return false;" class="searchbox2 sbx-custom">
+    <input style="border-radius:5px;" type="search" name="search" placeholder="Last Name" autocomplete="off" required="required" class="searchbox_input">
+    <button type="reset" title="Clear the search query." class="searchbox_reset" style="cursor:pointer;">
+<i class="fas fa-times"></i>
+    </button>
+</form>
+
+<form novalidate="novalidate" onsubmit="return false;" class="searchbox2 sbx-custom">
+    <input style="border-radius:5px;" type="search" name="search" placeholder="Email" autocomplete="off" required="required" class="searchbox_input">
+    <button type="reset" title="Clear the search query." class="searchbox_reset" style="cursor:pointer;">
+<i class="fas fa-times"></i>
+    </button>
+</form>
+
+<form novalidate="novalidate" onsubmit="return false;" class="searchbox2 sbx-custom">
+    <input style="border-radius:5px;" type="search" name="search" placeholder="Password" autocomplete="off" required="required" class="searchbox_input">
+    <button type="reset" title="Clear the search query." class="searchbox_reset" style="cursor:pointer;">
+<i class="fas fa-times"></i>
+    </button>
+</form>
+
+<p class="signup"><a href="#">SIGN UP NOW!</a></p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+<div class="services">
+<span class="servicesh">SERVICES</span>
+<div style="width: 81%; height: 7px; background: #4ba6e1; margin: auto;"></div>
+     <div class="servicesgrids">
+<a href="#"><div class="servicesgrid"><i class="fas fa-mobile-alt"></i><br><p>mobile</p></div></a>
+<a href="#"><div class="servicesgrid"><i class="fas fa-wifi"></i><br><p>internet</p></div></a>
+<a href="#"><div class="servicesgrid"><i class="fas fa-graduation-cap"></i><br><p>education</p></div></a>
+<a href="#"><div class="servicesgrid"><i class="fas fa-lightbulb"></i><br><p>utilities</p></div></a>
+<a href="bank.html"><div class="servicesgrid"><i class="fas fa-university"></i><br><p>bank</p></div></a>
+<a href="#"><div class="servicesgrid"><i class="fas fa-gamepad"></i><br><p>game</p></div></a>
+<a href="#"><div class="servicesgrid"><i class="fas fa-umbrella"></i><br><p>insuarance</p></div></a>
+<a href="#"><div class="servicesgrid"><i class="fas fa-tv"></i><br><p>television</p></div></a>
+<a href="#"><div class="servicesgrid"><i class="fas fa-film"></i><br><p>ticket order</p></div></a>
+<a href="#"><div class="servicesgrid"><i class="fas fa-taxi"></i><br><p>taxi</p></div></a>
+<a href="#"><div class="servicesgrid"><i class="fas fa-heart"></i><br><p>charity</p></div></a>
+<a href="#"><div class="servicesgrid"><i class="fas fa-plus-circle"></i><br><p>other</p></div></a>
+     </div>
+</div>
+
+
+<span class="servicesh" style="color:#4ba6e1;">PARTNERS</span>
+<div style="width: 81%; height: 7px; background: #4ba6e1; margin: auto;"></div>
+
+<div class="slider2">
+    <marquee behavior="alternate" onmouseover="this.stop()" onmouseout="this.start()" direction="left" scrollamount="8" scrolldelay="1">
+<div class="slide">
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250"></div>
+<div class="slide">
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250"></div>
+<div class="slide">
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250"></div>
+<div class="slide">
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250"></div>
+<div class="slide">
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250"></div>
+<div class="slide">
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250"></div>
+<div class="slide">
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250"></div>
+    </marquee>
+</div>
+
+
+
+
+<div class="footer">
+<div class="foot">
+
+
+
+<div class="f1">
+<a href="" class="lang" onclick='translateTo("AZ"); under1(); setCookie('dils', 'AZ', 365);'>AZ</a>
+<a href="" class="lang" onclick='translateTo("EN"); under2(); setCookie('dils', 'EN', 365);'>EN</a>
+<a href="" class="lang" onclick='translateTo("RU"); under3(); setCookie('dils', 'RU', 365); return false'>RU</a>
+</br>
+<p class="copyr"><i>© 2018, Payment.az</i></br>All rights reserved.</p>
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="middle">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-google-plus-g"></i></a>
+
+<div>
+<a href="#"><div class="appstore">
+<i class="fas fa-mobile-alt"></i><p>Available on App Store</p>
+</div></a>
+<a href="#"><div class="appstore">
+<i class="fab fa-google-play"></i><p>Available on Google Play</p>
+</div></a>
+   </div>
+</div>
+
+
+<div class="f3">
+<span class="stay">STAY CONNECTED</span>
+<form novalidate="novalidate" onsubmit="return false;" class="searchbox2 sbx-custom searchbox3">
+    <input style="border-radius:5px;border-right:36px solid #555;" type="search" name="email" placeholder="Enter your email" autocomplete="on" required="required" class="searchbox_input">
+    <button type="submit" title="Submit your search query." class="searchbox_submit">
+     <i class="fas fa-envelope" style="color:#fff;font-size:18px;"></i>
+    </button>
+    <button type="reset" title="Clear the search query." class="searchbox_reset" style="right:10%;">
+<i class="fas fa-times"></i>
+    </button>
+</form>
+
+</div>
+
+
+
+
+</div>
+</div>
+<div style="display:none;width:0;height:0;">
+<script>
+function under1(){
+  document.getElementsByClassName("lang")[0].style = "text-decoration:underline;";
+  document.getElementsByClassName("lang")[1].style = "text-decoration:none";
+  document.getElementsByClassName("lang")[2].style = "text-decoration:none";
+}
+
+function under2(){
+  document.getElementsByClassName("lang")[0].style = "text-decoration:none;";
+  document.getElementsByClassName("lang")[1].style = "text-decoration:underline";
+  document.getElementsByClassName("lang")[2].style = "text-decoration:none";
+}
+
+function under3(){
+  document.getElementsByClassName("lang")[0].style = "text-decoration:none;";
+  document.getElementsByClassName("lang")[1].style = "text-decoration:none";
+  document.getElementsByClassName("lang")[2].style = "text-decoration:underline";
+}
 </script>
 
 
 
 
 
-<div class="containter">
-
-
-
-
-
-
-<div class="cizgi"></div>
-<div class="ustmenu">
-<div class="ustmenu1">&nbsp; 5 Ağustos Cumartesi 2015</div>
-     <div class="ustmenu2"><div class="arabuton"><i class="fa fa-search" aria-hidden="true"></i></div>
-
-     <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
-       <symbol xmlns="http://www.w3.org/2000/svg" id="sbx-icon-clear-3" viewBox="0 0 20 20">
-         <path d="M8.114 10L.944 2.83 0 1.885 1.886 0l.943.943L10 8.113l7.17-7.17.944-.943L20 1.886l-.943.943-7.17 7.17 7.17 7.17.943.944L18.114 20l-.943-.943-7.17-7.17-7.17 7.17-.944.943L0 18.114l.943-.943L8.113 10z" fill-rule="evenodd" />
-       </symbol>
-     </svg>
-
-     <form novalidate="novalidate" onsubmit="return false;" class="searchbox sbx-twitter">
-       <div role="search" class="sbx-twitter__wrapper">
-         <input type="search" name="search" placeholder="Search your website" autocomplete="off" required="required" class="sbx-twitter__input">
-         <button type="reset" title="Clear the search query." class="sbx-twitter__reset">
-           <svg role="img" aria-label="Reset">
-             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sbx-icon-clear-3"></use>
-           </svg>
-         </button>
-       </div>
-     </form>
-     <script type="text/javascript">
-       document.querySelector('.searchbox [type="reset"]').addEventListener('click', function() {  this.parentNode.querySelector('input').focus();});
-     </script>
-
-
-
-
-
-     </div>
-</div>
-<div class="header">
-<a href="#"><img src="Logo.png" class="logo"/></a>
-<img src="reklam.png" class="reklam"/>
-</div>
-
-
-<div class="menu">
-<ul class="menus">
- <a href="#"><li>Ana Sayfa</li></a>
- <a href="#"><li>Foto Galeri</li></a>
- <a href="#"><li>Video Galeri</li></a>
- <a href="#"><li>İletişim</li></a>
-</ul>
-
-<div class="sondakika"><div id="baslik">Son Dakika</div>
-<marquee>22:15  Son Dakika Büyük Gelişme...</marquee>
-</div>
-
-</div>
-
-
-
-<div class="icerik">
-
-<div style="width:8%;float:right;background:#444;margin-top:0%;margin-right:2.5%;"><img src="reklama.png"></div>
-
-<div class="songelisme">
-<img src="manset.png" class="manset"/>
- <div class="menuson">
-<a href="#manset"><li>1</li></a>
-<a href="#manset"><li>2</li></a>
-<a href="#manset"><li>3</li></a>
-<a href="#manset"><li>4</li></a>
-<a href="#manset"><li>5</li></a>
-<a href="#manset"><li>6</li></a>
-<a href="#manset"><li>7</li></a>
-<a href="#manset"><li>8</li></a>
-<a href="#manset"><li>9</li></a>
-<a href="#manset"><li>10</li></a>
-<a href="#manset"><li>11</li></a>
-<a href="#manset"><li>12</li></a>
-<a href="#manset"><li>13</li></a>
-<a href="#manset"><li>14</li></a>
-<a href="#manset"><li>15</li></a>
-<a href="#manset"><li>16</li></a>
-<a href="#manset"><li>17</li></a>
-</div>
- </div>
-
-
-
-<div class="koseyazar">
-<button class="koseyazarl" onclick="currentDiv(1)">1</button>
-<button class="koseyazarl" onclick="currentDiv(2)">2</button>
-<button class="koseyazarl" onclick="currentDiv(3)">3</button>
-
-<div class="mySlides">
-<div class="yazaresim"><img src="yazar1.png"></img></div>
-<p class="yazarisim">Osman MÜFTÜOĞLU</p>
-<p class="yazarhak">Hürriyet Gazetesi yazarı Osman Müftüoğlu, 1955’te Anamur’da doğdu. 1972’de Anamur Lisesi’ni, 1978’de Ankara Üniversitesi Tıp Fakültesi’ni bitirdi. 1984’te iç hastalıkları uzmanı,1989’da doçent, 1990’da iç hastalıkları klinik şefi, 1997’de profesör oldu.</p>
-</div>
-
-
-
-<div class="mySlides">
-<div class="yazaresim"><img src="yazar2.png"></img></div>
-<p class="yazarisim">Ahmet HAKAN</p>
-<p class="yazarhak">Ahmet Hakan Coşkun... Hürriyet gazetesi yazarı ve KanalD anchormanı Ahmet Hakan, 1967 yılının 11 Ağustos ayında Yozgat'ta gözlerini hayata açtı. Çocukluğunu babasının müftülük görevlerinde bulunduğu Ağrı, Amasya, Çanakkale Balıkkesir... illerinde geçirdi.</p>
-</div>
-
-
-
-<div class="mySlides">
-<div class="yazaresim"><img src="yazar3.png"></img></div>
-<p class="yazarisim">Erdal SAĞLAM</p>
-<p class="yazarhak">1957 yılında Ankara’da doğdu. Türkiye Ortadoğu Amme İdaresi (TODAİE) Sevk ve İdare Yüksek Okulu mezunu.
-Meslek hayatına 1984 yılında Dünya gazetesi’nde başladı. Daha sonra aynı gazetenin Ankara Bürosu’na geçti ve haber müdürlüğü yaptı. </p>
-</div>
-
-            </div>
-
-
-
-
-
-
-
-
- <script>
-            var slideIndex = 1;
-            showDivs(slideIndex);
-
-            function plusDivs(n) {
-              showDivs(slideIndex += n);
+<script>
+var voc = [
+            {
+              "AZ":"Daxil ol",
+              "EN":"Log in",
+              "RU":"Log in2"
+            },
+            {
+              "AZ":"Qeydiyyatdan keç",
+              "EN":"Sign up",
+              "RU":"Sign up2"
+            },
+            {
+              "AR":"و",
+              "ES":"y",
+              "EN":"and"
+            },
+            {
+              "AR":"في اللغة العربية",
+              "ES":"a España",
+              "EN":"to English"
             }
+          ];
+
+
+function translate(ele,lng){
+ for(var i=0;i<voc.length;i++){
+  for(var k in voc[i]){
+   if(voc[i][k] == ele.innerText.trim()){
+    ele.innerText = voc[i][lng];
+    break;
+   }
+  }
+ }
+}
+
+
+function translateTo(lng){
+var trc = document.getElementsByClassName("trans");
+for(var i=0;i<trc.length;i++){
+translate(trc[i],lng);
+}
+}
+//add this function to any event button.click,select.change or on load
+//translateTo("AR");
+
+
+
+function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+
+      function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+      }
+
+
+function fonk() {
+        if (getCookie("dils") == "" || getCookie("dils") == null) {
+          document.getElementById("dils").innerHTML = "Secili dil yok.";
+        }
+        else {
+          document.getElementById("dils").innerHTML = getCookie("dils");
+        }
+      };
+</script>
+
+
+<script>
+// for lang select
+function myFunction() {
+    var x = document.getElementById("Demo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+
+<script>
+// for login modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+<script>
+$(document).ready(function(){
+  $('.slider1').bxSlider({
+    slideWidth: 315,
+    minSlides: 1,
+    maxSlides: 5,
+    slideMargin: 0,
+  });
+});
+
+</script>
+
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
 
-            function currentDiv(n) {
-              showDivs(slideIndex = n);
-            }
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
 
-            function showDivs(n) {
-              var i;
-              var x = document.getElementsByClassName("mySlides");
-              var dots = document.getElementsByClassName("demo");
-              if (n > x.length) {slideIndex = 1}
-              if (n < 1) {slideIndex = x.length}
-              for (i = 0; i < x.length; i++) {
-                 x[i].style.display = "none";
-                 x[i].style.transition = "2s";
-              }
-              for (i = 0; i < dots.length; i++) {
-                 dots[i].className = dots[i].className.replace(" w3-red", "");
-              }
-              x[slideIndex-1].style.display = "block";
-              x[slideIndex-1].style.transition = "2s"
-              dots[slideIndex-1].className += " w3-red";
-            }
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("slidertitle");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" dotwhite", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " dotwhite";
+}
 
-            $('.koseyazar').on('click', function() {
-                $(this).toggleClass('clicked');
-            });
-            </script>
 
 
 
+function slider1() {
+document.getElementsByClassName("slider")[0].style.cssText = "background:url(commerce.png);";
+}
 
+function slider2() {
+document.getElementsByClassName("slider")[0].style.cssText = "background:url(commerce2.png);";
+}
 
-<br><br>
+function slider3() {
+document.getElementsByClassName("slider")[0].style.cssText = "background:url(commerce3.png);";
+}
+</script>
 
 
 
 
 
-<div class="baslik">Gündem Haberleri</div>
-<div style="/*float:left;*/display:inline-block;border-left:38px solid #a60c02;border-top:45px solid transparent;"></div>
-<div style="/*float:left;*/height:3px;background:#a60c02;width:80%;margin-bottom:15px;" class="sol"></div>
-<div style="/*float:left;*/" class="sol"><img src="manset2.png" /></div>
-<div style="/*float:left;*/width:36%;font-size:22px;font-family:Titillium Web;color:#000;" class="sol">22 Yıl Sonra Aynı Yerde Kalp Krizi Geçirdi..
-</div>
 
-<div class="sol" style="/*float:left;*/ width:36%;font-size:14px;font-family:Titillium Web;color:#000;margin-bottom:50px;line-height: 16px;">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacinia magna libero, et mattis elit tincidunt vitae. Phasellus malesuada auctor malesuada. Integer finibus accumsan risus non ullamcorper. Donec porta semper mattis. Donec non cursus leo.</div>
 
-<div class="genel"><a href="#"><div class="baslik">Devamını Oku...</div></a>
-<div class="yan"></div>
-</div>
 
-
-
-
-
-</div>
-
-
-
-
-
-<br>
-<br>
-
-
-
-
-
-<div class="galerigovde">
-<div class="gicon"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
-<div class="referanslar">
-
-   <div class="referans"><li><div class="refyazi">Haber Başlığı</div></li></div>
-    <div class="referans"><li><div class="refyazi">Haber Başlığı</div></li></div>
-    <div class="referans"><li><div class="refyazi">Haber Başlığı</div></li></div>
-    <div class="referans"><li><div class="refyazi">Haber Başlığı</div></li></div>
-</div>
-</div>
-</br></br></br>
-
-
-
-
-</div><!-- containter-->
-
-
-
-
-
-
-
-<!--footer-->
-<div id="templatemo_footer_wrapper">
-    <div id="templatemo_footer">
-        <div class="section_w180">
-           <div class="header_05"><i class="fa fa-globe"></i>&nbsp;Hızlı linkler</div>
-            <div class="section_w180_content">
-                <ul class="footer_menu_list">
-                    <li><a href="/#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;Son Dakika</a></li>
-                    <li><a href="/#"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;Hakkımızda</a></li>
-                    <li><a href="/#"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;İletişim</a></li>
-                    <li><a href="/#"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;Künye</a></li>
-                    <li><a href="/#"><i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;Reklam</a></li>
-                </ul>
-            </div>
-        </div>
-
-
-
-		        <div class="section_w180">
-           <div class="header_05"> <i class="fa fa-life-ring"> </i>&nbsp;Haberler</div>
-            <div class="section_w180_content">
-                <ul class="footer_menu_list">
-                    <li><a href="/index.php"><i class="fa fa-refresh fa-spin "></i>&nbsp;Güncel</a></li>
-                    <li><a href="/showteam.php"><i class="fa fa-credit-card" aria-hidden="true"></i>&nbsp;Ekonomi</a></li>
-                    <li><a href="/stats.php"><i class="fa fa-futbol-o" aria-hidden="true"></i>&nbsp;Spor</a></li>
-                    <li><a href="/syndication.php"><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;Gündem</a></li>
-                    <li><a href="/archive"><i class="fa fa-globe" aria-hidden="true"></i>&nbsp;Dünya</a></li>
-
-                </ul>
-            </div>
-        </div>
-
-
-
-
-        <div class="section_w180">
-            <div class="header_05"><i class="fa fa-globe"></i>&nbsp;Site haritası</div>
-            <div class="section_w180_content">
-                <ul class="footer_menu_list">
-                    <li><a href="/showteam.php"><i class="fa fa-mobile" aria-hidden="true"></i>&nbsp;Mobil Site</a></li>
-                    <li><a href="/stats.php"><i class="fa fa-desktop" aria-hidden="true"></i>&nbsp;Masaüstü Site</a></li>
-                    <li><a href="#"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;Kullanım Şartları</a></li>
-                    <li><a href="/#top"><i class="fa fa-user-secret" aria-hidden="true"></i>&nbsp;Gizlilik İlkeleri</a></li>
-                    <li><a href="/#top"><i class="fa fa-rss"></i>&nbsp;RSS</a></li>
-
-                </ul>
-            </div>
-        </div>
-
-
-
-		<div class="footeryazi">İnternetHaber kimdir,nedir?<br>
-			<div style="margin-top: -10px;">-----------------------------</div><br>
-	<div class="footeryazi2">Lorem ipsum dolor sit amet, consectetur adipiscingelit.<br>Aliquam eget lectus vel libero molestie aliquam<br> in vel ante.Sed sit amet estnec enim dapibus interdum. </div>
-
-
-
-
-
-<div style="margin-top: -15px;margin-left: 35px;">
-<ul class="social-icons icon-circle list-unstyled list-inline">
-<li> <a href="#"><i class="fa fa-facebook"></i></a></li>
-	<li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-		<li> <a href="#"><i class="fa fa-rss"></i></a></li>
-			<li> <a href="#"><i class="fa fa-google-plus"></i></a></li>
-</ul></div>
-
-
-
-
-</div>&lt;</div>
-
-
-<div class="footeralt">	<div style="margin-left:3%;display:inline-block;"><a href="http://www.wp-tr.org/hakkinda/" target="_blank">© WordPress-TR, 2005 - 2017</a> | <a href="http://www.wp-tr.org/kullanim-kosullari/" target="_blank">Kullanım Koşulları</a> | <a href="http://www.wp-tr.org/hakkinda/" target="_blank">Hakkında</a></div>
-		<div style="float:right;margin-right:2%;">
-			Çizim Ve Kodlama:&nbsp;<a href="http://destek.10tr.net/member.php?action=profile&amp;uid=6835" target="_blank">Novruz R</a>
-				</div>
-</div>
-
-
-
-</div>
 </body></head>
