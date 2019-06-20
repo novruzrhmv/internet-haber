@@ -2,24 +2,23 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto|Titillium+Web:400,600,700" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="stil.css"/>
 <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0\css\font-awesome.min.css" />
-<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 <div id="preloader">
     <div id="status">&nbsp;</div>
 </div>
 
    <!-- Preloader -->
-<script type="text/javascript">
-    //<![CDATA[
-        $(window).load(function() { // makes sure the whole site is loaded
-            $('#status').fadeOut(); // will first fade out the loading animation
-            $('#preloader').delay(300).fadeOut('slow'); // will fade out the white DIV that covers the website.
-            $('body').delay(300).css({'overflow':'visible'});
-        })
-    //]]>
+
+<script>
+window.onload = function(){ 
+if(document.readyState === "complete"){
+document.getElementById("preloader").style.cssText="opacity:0;visibility:hidden;transition:350ms ease;";
+document.body.style.cssText="overflow:visible;";
+setTimeout(function(){
+        document.getElementById("preloader").remove();
+        },400);
+}
+}
 </script>
-
-
-
 
 
 <div class="containter">
